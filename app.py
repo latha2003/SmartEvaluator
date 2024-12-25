@@ -5,8 +5,8 @@ from nltk.tokenize import word_tokenize
 import nltk
 import json
 
-# Download NLTK resources
-nltk.download('punkt')
+nltk.data.path.append('./nltk_data')
+nltk.download('punkt', download_dir='./nltk_data')
 
 # Load pre-trained model
 model = SentenceTransformer('all-MiniLM-L6-v2')
