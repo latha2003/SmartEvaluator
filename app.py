@@ -5,13 +5,8 @@ from nltk.tokenize import word_tokenize
 import nltk
 import json
 
-from nltk.tokenize import word_tokenize, sent_tokenize
-
-# Ensure nltk resources are available
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+nltk.download('punkt', download_dir='./nltk_data')
+nltk.data.path.append('./nltk_data')
 
 # Load pre-trained model
 model = SentenceTransformer('all-MiniLM-L6-v2')
