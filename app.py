@@ -6,6 +6,7 @@ import nltk
 import json
 
 nltk.download('punkt', download_dir='./nltk_data')
+nltk.download('punkt_tab')
 nltk.data.path.append('./nltk_data')
 
 # Load pre-trained model
